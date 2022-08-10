@@ -1,0 +1,24 @@
+.meal{
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: rgb(228, 208, 10);
+    
+}
+.meal h1{
+    color: black;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.meal p{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
