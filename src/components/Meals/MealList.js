@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './MealList.module.css';
 
 const mealsAvailable = [
     {
@@ -24,12 +25,12 @@ const mealsAvailable = [
         name: 'Vitumbua',
         description: 'tasty yummy potata-like flesh',
         price: 'ksh'+ 250 
-    }
+    },
 ]
 
 function MealList() {
   return (
-    <div>
+    <div className={classes.meals}>
         {mealsAvailable.map(meal =>  
             <li>{meal.name}</li>
         )}
