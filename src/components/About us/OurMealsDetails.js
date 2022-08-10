@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import classes from './OurMealsDetails.module.css'
 
 function OurMealsDetails() {
   return (
-    <div>
+    <div className={classes.details}>
         <h1> All you need to know about our Meals</h1>
         <p>Italian cuisine is highly regionalized. Dishes served commonly in 
             one area may not even be known in another. But overall, there is 
@@ -13,7 +14,12 @@ function OurMealsDetails() {
             the coasts. Italian cuisine in Italy bears almost no resemblance 
             to Italian cuisine in other countries.</p>
 
+
     </div>
+        
+
+
+       
   )
 }
 

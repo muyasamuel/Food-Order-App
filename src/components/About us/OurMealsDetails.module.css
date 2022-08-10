@@ -1,0 +1,14 @@
+.details{
+    width: 90%;
+    max-width: 45rem;
+    color: #fff;
+    margin: 7rem auto ; 
+    text-align: center;
+    background-color: rgb(26, 23, 23);
+    border-radius: 25px;
+    padding: 2rem;
+    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+    
+
+}
+
