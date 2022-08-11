@@ -9,7 +9,7 @@ import MealList from "./components/Meals/MealList";
 function App() {
   return (
     <div >
-        <Header />
+       <Header />
        <OurMealsDetails />
        <MealList />
     </div>
