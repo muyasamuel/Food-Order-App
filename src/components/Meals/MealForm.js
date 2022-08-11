@@ -1,10 +1,11 @@
 import React from 'react';
 import Input from '../UI/Input';
+import classes from './MealForm.module.css'
 
 
 function MealForm() {
   return (
-    <div>
+    <div className={classes.form}>
         <Input label='amount' input={{
             type: 'number',
             id: 'amount',
