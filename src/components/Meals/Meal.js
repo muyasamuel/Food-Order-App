@@ -1,5 +1,6 @@
 import React from 'react'
-import classes from './Meal.module.css'
+import classes from './Meal.module.css';
+import MealForm from './MealForm';
 
 function Meal({name , description, price}) {
   return (
@@ -7,10 +8,11 @@ function Meal({name , description, price}) {
      <div>
         <h2>{name}</h2>
         <p>{description}</p>
-    </div>
-    <div className={classes.price}>
         <h3>Price ;<span>{price}</span></h3>
-        
+    </div>
+    <div className={classes.mealform}>
+      <MealForm />
+   
     </div>
     </div>
    
