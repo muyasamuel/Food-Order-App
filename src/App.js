@@ -6,9 +6,11 @@ import MealList from "./components/Meals/MealList";
 
 
 
+
 function App() {
   return (
     <div >
+     
        <Header />
        <OurMealsDetails />
        <MealList />
