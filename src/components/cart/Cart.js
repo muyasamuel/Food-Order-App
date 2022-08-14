@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Cart.module.css';
 import Modal from '../Modal/Modal';
 
-function cart() {
+function cart(props) {
 
     const cartItems = (
         <ul className={classes['cart-items']} >
@@ -24,7 +24,7 @@ function cart() {
       <span>35.62</span>
     </div>
     <div className={classes.actions}>
-      <button className={classes['button--alt']}>Close</button>
+      <button className={classes['button--alt']} onClick={props.onHideCart}>Close</button>
       <button className={classes.button}>Order</button>
     </div>
     </Modal>

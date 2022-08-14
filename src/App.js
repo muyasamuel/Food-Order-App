@@ -11,6 +11,13 @@ import { useState } from "react";
 function App() {
   const [cartSeen , setCartSeen ] = useState(false);
 
+  const showCartHandler = () => {
+    setCartSeen(true)
+  }
+
+  const hideCartHandler = () => {
+    setCartSeen(false)
+  }
  
 
 
@@ -18,9 +25,9 @@ function App() {
 
   return (
     <div >
-      { cartSeen && <Cart />}
+      { cartSeen && <Cart onHideCart={hideCartHandler} />}
      
-       <Header />
+       <Header onShowCart={showCartHandler}/>
        <OurMealsDetails />
        <MealList />
     </div>
