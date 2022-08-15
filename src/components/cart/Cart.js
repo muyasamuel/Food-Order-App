@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Cart.module.css';
 import Modal from '../Modal/Modal';
 
-function cart(props) {
+function Cart(props) {
 
     const cartItems = (
         <ul className={classes['cart-items']} >
@@ -31,4 +31,4 @@ function cart(props) {
   )
 }
 
-export default cart
+export default Cart
