@@ -33,7 +33,7 @@ function MealList() {
   return (
     <div className={classes.meals}>
         {mealsAvailable.map(meal =>  
-        <Meal name={meal.name} description={meal.description} price={meal.price}/>
+        <Meal name={meal.name} description={meal.description} price={meal.price} id={meal.id}/>
            
         )}
 

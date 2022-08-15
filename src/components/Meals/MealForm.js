@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Input from '../UI/Input';
 import classes from './MealForm.module.css';
 
 
 
 function MealForm() {
- 
+  const amountRef = useRef();
+  const submit = (e) => {
+    e.preventDefault();
+
+    const enteredAmount = amountRef.current.value;
+    console.log(enteredAmount)
+  }
   return (
-    <div className={classes.form}>
-        <Input label='amount' input={{
+    <form className={classes.form} onSubmit={submit}>
+      <Input ref={amountRef} label='amount' input={{
             type: 'number',
             id: 'amount',
             min: '1',
@@ -17,7 +23,9 @@ function MealForm() {
             defaultValue: '1',
         }}/>
         <button>Add</button>
-    </div>
+
+    </form>
+    
   )
 }
 
