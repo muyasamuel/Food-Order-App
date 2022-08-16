@@ -9,8 +9,8 @@ import CartContext from '../store/cart-context';
 function Header(props) {
  const context = useContext(CartContext);
 
- const noOfCartItems = context.items.reduce((latestNumber, item) => {
-  return latestNumber + item.amount
+ const noOfCartItems = context.items.reduce((curNumber, item) => {
+  return curNumber + item.amount
  }, 0)
 
 

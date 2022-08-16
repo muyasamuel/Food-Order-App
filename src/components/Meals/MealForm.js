@@ -4,7 +4,7 @@ import classes from './MealForm.module.css';
 
 
 
-function MealForm() {
+function MealForm(props) {
   const [amountValid , setAmountValid] = useState(true)
 
 
@@ -14,13 +14,14 @@ function MealForm() {
     
 
     const enteredAmount = amountRef.current.value;
+    const enteredAmountValue = +enteredAmount;
 
     if( enteredAmount.trim() === '' || enteredAmount < 0 || enteredAmount > 5){
       setAmountValid(false);
       return;
     }
 
-    console.log(enteredAmount)
+    props.onAddToCart(enteredAmountValue)
   }
   return (
     <form className={classes.form} onSubmit={submit}>
