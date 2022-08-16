@@ -7,25 +7,25 @@ const mealsAvailable = [
         id: 'm1',
         name: 'catlesi',
         description: 'tasty yummy potata-like flesh',
-        price: 'ksh'+ 250 
+        price: 250 
     },
     {
         id: 'm2',
         name: 'Mahamri',
         description: 'tasty yummy potata-like flesh',
-        price: 'ksh'+ 350 
+        price:  350 
     },
     {
         id: 'm3',
         name: 'Kaimati',
         description: 'tasty yummy potata-like flesh',
-        price: 'ksh'+ 200 
+        price:  200 
     },
     {
         id: 'm4',
         name: 'Vitumbua',
         description: 'tasty yummy potata-like flesh',
-        price: 'ksh'+ 150 
+        price:  150 
     },
 ]
 

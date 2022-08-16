@@ -21,7 +21,7 @@ function Meal({name , description, price, id}) {
      <div>
         <h2>{name}</h2>
         <p>{description}</p>
-        <h3>Price ;<span>{price}</span></h3>
+        <h3>Ksh<span>{price}</span></h3>
     </div>
     <div className={classes.mealform}>
       <MealForm onAddToCart={addToCart} />
