@@ -10,6 +10,7 @@ function Cart(props) {
  const cartHasItems = cartCtx.items.length > 0 ;
 
  const addToCart = (item) => {
+  cartCtx.addItem(item)
 
  }
 
