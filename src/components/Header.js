@@ -5,6 +5,26 @@ import CartContext from '../store/cart-context';
 
 
 
+const links = [
+  {
+      id: '1',
+      name: 'Breakfast',
+      
+  },
+  {
+      id: '2',
+      name: 'Lunch',
+      
+  },
+  {
+      id: '3',
+      name: 'Dinner',
+      
+  }
+];
+
+
+
 
 function Header(props) {
  const context = useContext(CartContext);
@@ -24,7 +44,12 @@ function Header(props) {
           
         
         
-          
+            {links.map((link) =>  {
+              const{ id, name} = link;
+              return <ul>
+                <li key={id}>{name}</li>
+                </ul>
+            })}
 
                  <button className={classes.button} onClick={props.onShowCart}> 
                     <span><FaShoppingCart size='1.5rem' /></span>
