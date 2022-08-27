@@ -69,4 +69,8 @@
       padding: 0.25rem 1.7rem;
       
     }
+    .header h1{
+     display: none;
+  
+  }
     }
