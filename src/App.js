@@ -3,13 +3,15 @@ import Header from "./components/Header";
 import OurMealsDetails from "./components/About us/OurMealsDetails";
 import MealList from "./components/Meals/MealList";
 import Cart from './components/cart/Cart'
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SideBar from "./components/SideBar";
+import { AppContext } from './store/App-context';
 
 
 
 
 function App() {
+  const { isSidebarOpen } = useContext(AppContext)
   const [cartSeen , setCartSeen ] = useState(false);
 
   useEffect(() => {}, [])
@@ -31,7 +33,7 @@ function App() {
       { cartSeen && <Cart onHideCart={hideCartHandler} />}
      
        <Header onShowCart={showCartHandler}/>
-       <SideBar />
+       {isSidebarOpen && <SideBar /> } 
        <OurMealsDetails />
        <MealList />
     </div>

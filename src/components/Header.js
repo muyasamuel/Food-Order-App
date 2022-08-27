@@ -29,7 +29,7 @@ const links = [
 
 function Header(props) {
  const context = useContext(CartContext);
- const value = useContext(AppContext);
+ const {openSidebar } = useContext(AppContext);
 
  const noOfCartItems = context.items.reduce((curNumber, item) => {
   return curNumber + item.amount
@@ -41,7 +41,7 @@ function Header(props) {
 
         <div className={classes.header}>
           
-            <FaBars onClick={() => console.log(value)} className={classes.barIcon} />  
+            <FaBars onClick={openSidebar}  className={classes.barIcon} />  
             <h1>Mneti Meals</h1>
           
         
