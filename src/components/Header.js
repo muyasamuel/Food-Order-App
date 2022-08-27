@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from 'react'
 import classes from './Header.module.css'
 import { FaShoppingCart, FaBars } from "react-icons/fa";
 import CartContext from '../store/cart-context';
+import { AppContext } from '../store/App-context';
 
 
 
@@ -28,6 +29,7 @@ const links = [
 
 function Header(props) {
  const context = useContext(CartContext);
+ const value = useContext(AppContext);
 
  const noOfCartItems = context.items.reduce((curNumber, item) => {
   return curNumber + item.amount
@@ -39,7 +41,7 @@ function Header(props) {
 
         <div className={classes.header}>
           
-            <FaBars className={classes.barIcon} />  
+            <FaBars onClick={() => console.log(value)} className={classes.barIcon} />  
             <h1>Mneti Meals</h1>
           
         
