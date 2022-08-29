@@ -8,7 +8,9 @@ function SideBar() {
   return (
     <div className={classes.sidebar}>
         <h1>ReactMeals</h1>
-        <FaTimes onClick={closeSidebar}  />
+        <FaTimes className={classes.icon} onClick={closeSidebar}  />
+
+        
 
     </div>
   )
