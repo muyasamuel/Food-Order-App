@@ -27,6 +27,42 @@ const mealsAvailable = [
         description: 'tasty yummy potata-like flesh',
         price:  150 
     },
+    {
+        id: 'm4',
+        name: 'samosa',
+        description: 'tasty yummy potata-like flesh',
+        price:  150 
+    },
+    {
+        id: 'm5',
+        name: 'smokie',
+        description: 'tasty yummy potata-like flesh',
+        price:  100 
+    },
+    {
+        id: 'm6',
+        name: 'pizza',
+        description: 'tasty yummy potata-like flesh',
+        price:  600 
+    },
+    {
+        id: 'm7',
+        name: 'kebab',
+        description: 'tasty yummy potata-like flesh',
+        price:  150 
+    },
+    {
+        id: 'm8',
+        name: 'spagetti',
+        description: 'tasty yummy potata-like flesh',
+        price: 250 
+    },
+    {
+        id: 'm9',
+        name: 'Omena',
+        description: 'tasty yummy potata-like flesh',
+        price:  450 
+    },
 ]
 
 function MealList() {
