@@ -32,13 +32,7 @@ const meals = [
         category: 'breakfast',
         price:  150 
     },
-    {
-        id: 'm4',
-        name: 'samosa',
-        category: 'dinner',
-        description: 'tasty yummy potata-like flesh',
-        price:  150 
-    },
+
     {
         id: 'm5',
         name: 'smokie',
@@ -74,6 +68,13 @@ const meals = [
         description: 'tasty yummy potata-like flesh',
         price:  450 
     },
+    {
+        id: 'm10',
+        name: 'samosa',
+        category: 'dinner',
+        description: 'tasty yummy potata-like flesh',
+        price:  150 
+    },
 ]
 const AppProvider = ({children}) => {
    const [isSidebarOpen, setisSidebarOpen] = useState(false);
@@ -82,6 +83,10 @@ const AppProvider = ({children}) => {
    const filterItems =(category) => {
      const newItems = mealsAvailable.filter((item) =>  item.category === category);
      setMealsAvailable(newItems);
+   };
+
+   const showAll = () => {
+    setMealsAvailable(mealsAvailable)
    }
 
    
@@ -98,7 +103,7 @@ const AppProvider = ({children}) => {
 
 
 
-    return <AppContext.Provider value={{isSidebarOpen, openSidebar, closeSidebar, mealsAvailable, setMealsAvailable, filterItems}}>{children}</AppContext.Provider>
+    return <AppContext.Provider value={{isSidebarOpen, openSidebar, closeSidebar, mealsAvailable, setMealsAvailable, filterItems, showAll}}>{children}</AppContext.Provider>
 }
 
 export {AppContext, AppProvider}

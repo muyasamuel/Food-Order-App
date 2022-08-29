@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../store/App-context';
 
 
 function Filter() {
+ const { filterItems, showAll } =  useContext(AppContext);
   return (
     <div>
-      <button>All</button>
-      <button>Breakfast</button>
-      <button>Lunch</button>
-      <button>Dinner</button>
+      <button onClick={() => showAll()}>All</button>
+      <button onClick={() => filterItems('breakfast')}>Breakfast</button>
+      <button onClick={() => filterItems('lunch')}>Lunch</button>
+      <button onClick={() => filterItems('dinner')}>Dinner</button>
 
     </div>
   )
