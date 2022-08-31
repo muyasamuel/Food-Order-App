@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import ContactPage from '../components/ContactPage';
 
 function Contact() {
   return (
     <div>
-        <h1>This is the contact page</h1>
+      <ContactPage />
     </div>
   )
 }
