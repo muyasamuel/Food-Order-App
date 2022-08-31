@@ -3,26 +3,9 @@ import classes from './Header.module.css'
 import { FaShoppingCart, FaBars } from "react-icons/fa";
 import CartContext from '../store/cart-context';
 import { AppContext } from '../store/App-context';
+import { Link } from 'react-router-dom';
 
 
-
-const links = [
-  {
-      id: '1',
-      name: 'Breakfast',
-      
-  },
-  {
-      id: '2',
-      name: 'Lunch',
-      
-  },
-  {
-      id: '3',
-      name: 'Dinner',
-      
-  }
-];
 
 
 
@@ -43,15 +26,13 @@ function Header(props) {
           
             <FaBars onClick={openSidebar}  className={classes.barIcon} />  
             <h1>Mneti Meals</h1>
+            <Link to="/">Home</Link> 
+            <Link to="/about">About</Link> 
+            <Link to="/contact">Contact</Link> 
+            
           
         
         
-            {links.map((link) =>  {
-              const{ id, name} = link;
-              return <ul>
-                <li key={id}>{name}</li>
-                </ul>
-            })}
 
                  <button className={classes.button} onClick={props.onShowCart}> 
                     <span><FaShoppingCart size='1.5rem' /></span>

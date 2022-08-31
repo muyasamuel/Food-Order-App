@@ -4,14 +4,18 @@ import "./index.css";
 import App from "./App";
 import CartProvider from "./store/CartProvider";
 import { AppProvider } from "./store/App-context";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
     <AppProvider>
       <CartProvider>
         <App />
       </CartProvider>
     </AppProvider>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
