@@ -1,9 +1,10 @@
 import React from 'react'
+import AboutPage from '../components/AboutPage'
 
 function About() {
   return (
     <div>
-        <h1> This is the abouts page </h1>
+       <AboutPage />
     </div>
   )
 }
