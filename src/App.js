@@ -1,44 +1,29 @@
 
-import Header from "./components/Header";
-import OurMealsDetails from "./components/About us/OurMealsDetails";
-import MealList from "./components/Meals/MealList";
-import Cart from './components/cart/Cart'
-import Categories from './components/Categories'
-import { useContext, useEffect, useState } from "react";
-import SideBar from "./components/SideBar";
-import { AppContext } from './store/App-context';
+
+import About from './pages/About';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+
+
+import { Routes, Route } from "react-router-dom"
 
 
 
 
 function App() {
-  const { isSidebarOpen } = useContext(AppContext)
-  const [cartSeen , setCartSeen ] = useState(false);
-
-  useEffect(() => {}, [])
-
-  const showCartHandler = () => {
-    setCartSeen(true)
-  }
-
-  const hideCartHandler = () => {
-    setCartSeen(false)
-  }
- 
-
-
-
-
   return (
     <div >
-      { cartSeen && <Cart onHideCart={hideCartHandler} />}
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="about" element={ <About/> } />
+        <Route path="contact" element={ <Contact/> } />
+      </Routes>
      
-       <Header onShowCart={showCartHandler}/>
-       {isSidebarOpen && <SideBar /> } 
+     
+      
+      
        
-       <OurMealsDetails />
-       <Categories />
-       <MealList />
+      
     </div>
      
     

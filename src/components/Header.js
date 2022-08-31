@@ -32,14 +32,14 @@ function Header(props) {
             
           
         
+            <button className={classes.button} onClick={props.onShowCart}> 
+              <span><FaShoppingCart size='1.5rem' /></span>
+              <span className={classes.text}>Your Cart</span>
+              <span className={classes.badge}>{noOfCartItems}</span>
+            </button>
         
 
-                 <button className={classes.button} onClick={props.onShowCart}> 
-                    <span><FaShoppingCart size='1.5rem' /></span>
-                    <span className={classes.text}>Your Cart</span>
-                    <span className={classes.badge}>{noOfCartItems}</span>
-                 </button>
-        
+                 
 
         
            
