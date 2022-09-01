@@ -4,13 +4,14 @@ import { AppContext } from '../store/App-context';
 
 
 function Filter() {
- const { filterItems } =  useContext(AppContext);
+ const { filterItems, categories } =  useContext(AppContext);
   return (
     <div className={classes.btnDiv}>
-      <button className={classes.button}  onClick={() => filterItems()}>All</button>
-      <button className={classes.button}  onClick={() => filterItems('breakfast')}>Breakfast</button>
-      <button className={classes.button}  onClick={() => filterItems('lunch')}>Lunch</button>
-      <button className={classes.button}  onClick={() => filterItems('dinner')}>Dinner</button>
+      {
+        categories.map((category, index) => {
+          return <button key={index} onClick={() => filterItems(category)} className={classes.button}>{category}</button>
+        })
+      }
 
     </div>
   )

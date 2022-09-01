@@ -81,6 +81,7 @@ const allCategories = ['All', ...new Set(meals.map((item) => item.category))] ;
 console.log(allCategories)
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setisSidebarOpen] = useState(false);
+  const [categories, setCategories] = useState(allCategories)
   const [mealsAvailable, setMealsAvailable] = useState(meals);
   
 
@@ -95,9 +96,7 @@ const AppProvider = ({ children }) => {
     setMealsAvailable(newItems);
   };
 
-  const showAll = () => {
-    setMealsAvailable(mealsAvailable);
-  };
+
 
   const openSidebar = () => {
     setisSidebarOpen(true);
@@ -116,7 +115,8 @@ const AppProvider = ({ children }) => {
         mealsAvailable,
         setMealsAvailable,
         filterItems,
-        showAll,
+        categories,
+        setCategories
       }}
     >
       {children}
