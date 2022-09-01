@@ -81,11 +81,17 @@
       display: block;
      }
      .button { 
-      padding: 0.25rem 1.7rem;
+      padding: 0.25rem 1.2rem;
+      margin-right: 10px;
       
     }
     .header h1{
      display: none;
   
   }
+  .link{
+    display: none;
+  }
+
+ 
     }
