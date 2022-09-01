@@ -26,9 +26,9 @@ function Header(props) {
           
             <FaBars onClick={openSidebar}  className={classes.barIcon} />  
             <h1>Mneti Meals</h1>
-            <Link to="/">Home</Link> 
-            <Link to="/about">About</Link> 
-            <Link to="/contact">Contact</Link> 
+            <Link to="/"  className={classes.link}>Home</Link> 
+            <Link to="/about" className={classes.link}>About</Link> 
+            <Link to="/contact" className={classes.link}>Contact</Link> 
             
           
         
