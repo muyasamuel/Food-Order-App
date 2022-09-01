@@ -75,12 +75,21 @@ const meals = [
     price: 150,
   },
 ];
+
+
+const allCategories = ['All', ...new Set(meals.map((item) => item.category))] ;
+console.log(allCategories)
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setisSidebarOpen] = useState(false);
   const [mealsAvailable, setMealsAvailable] = useState(meals);
+  
 
   const filterItems = (category) => {
-    const newItems = mealsAvailable.filter(
+    if(category === 'All'){
+      setMealsAvailable(meals);
+      return;
+    }
+    const newItems = meals.filter(
       (item) => item.category === category
     );
     setMealsAvailable(newItems);
