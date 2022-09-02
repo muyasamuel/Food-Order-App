@@ -1,10 +1,13 @@
 import React from 'react';
-import classes from './AboutPage.module.css'
+import { FaPizzaSlice } from "react-icons/fa";
+import './AboutPage.css'
 
 function AboutPage() {
   return (
-    <div className={classes.aboutDiv}>
-        <h1>Here is a further description about us</h1>
+    <div className='aboutDiv'>
+        < FaPizzaSlice  className='icon' id='firstIcon'/>
+       
+        < FaPizzaSlice  className='icon' id='secondIcon'/>
     </div>
   )
 }
