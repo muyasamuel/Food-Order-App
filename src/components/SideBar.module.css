@@ -6,7 +6,9 @@
     width: 275px;
     height: 100%;
     padding: 20px 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(26, 23, 23);
+   
     
 }
 .sidebar h1{
@@ -26,4 +28,30 @@
 
 }
 
+
+.listItems{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 60px;
+}
+
+
+.link{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px ;
+    border-radius: 7px;
+
+  }
+
+  .listDiv{
+    margin-top: 3rem;
+  }
+
+  .list{
+    
+  }
 
