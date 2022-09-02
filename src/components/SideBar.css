@@ -1,0 +1,70 @@
+.sidebar{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #2F4050;
+   
+    
+}
+.sidebar h1{
+    color:  #b94517;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.closeicon{
+    color: crimson;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+
+}
+
+
+
+.listDiv{
+    margin-top: 3rem;
+    height: auto;
+}
+.sidebarList{  
+    padding: 0;
+}
+
+.row{
+    width: 100%;
+    height: 50px;
+    margin: 0%;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.row:hover{
+    background-color: #293826;
+}
+.row #active{
+    background-color: #293826;
+}
+.icons{
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+.title{
+    flex: 70%;
+}
+
+
+  

@@ -1,29 +1,32 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import classes from "./SideBar.module.css";
+import "./SideBar.css";
 import { FaTimes } from "react-icons/fa";
 import { AppContext } from "../store/App-context";
+import { SideBarData } from "./SideBarData";
 
 function SideBar() {
   const { closeSidebar } = useContext(AppContext);
   return (
-    <div className={classes.sidebar}>
+    <div className='sidebar'>
       <h1>MnetiMeals</h1>
-      <FaTimes className={classes.icon} onClick={closeSidebar} />
-
-      <div className={classes.listDiv} >
-        <ul className={classes.list} >
-          <li className={classes.listItems}>
-            <Link to="/" className={classes.link}>
-              Home
-            </Link>
-            <Link to="/about" className={classes.link}>
-              About
-            </Link>
-            <Link to="/contact" className={classes.link}>
-              Contact
-            </Link>
-          </li>
+      <FaTimes className='closeicon'onClick={closeSidebar} />
+      <div className='listDiv'>
+        <ul className='sidebarList'>
+          {SideBarData.map((item, index) => {
+            const { icon, title, link } = item;
+            return (
+              <li
+                className='row'
+                id={window.location.pathname === link ? 'active' : ''}
+                onClick={() => (window.location.pathname = link)}
+                key={index}
+              >
+                {" "}
+                <div className='icons'>{icon} </div>
+                <span className='title'>{title}</span>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
