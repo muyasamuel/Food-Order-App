@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPizzaSlice } from "react-icons/fa";
+import aboutImage from '../images/about.jpg'
 import "./AboutPage.css";
 
 function AboutPage() {
@@ -26,6 +27,9 @@ function AboutPage() {
           coasts. Italian cuisine in Italy bears almost no resemblance to
           Italian cuisine in other countries.
         </p>
+      </div>
+      <div className="imageDiv">
+        <img src={aboutImage} alt='about'/>
       </div>
 
       <FaPizzaSlice className="icon" id="secondIcon" />

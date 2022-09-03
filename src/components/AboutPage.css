@@ -54,10 +54,25 @@
     border-left: 6px solid rgb(233, 233, 93);
     height: 350px;
     position: absolute;
-    top: 18%;
+    top: 20%;
     margin-left: -3px;
     border-radius: 3px;
     left: 8%;
 
+  }
+
+
+  .imageDiv {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    right: 6%;
+  }
+
+  .imageDiv img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
   }
   
