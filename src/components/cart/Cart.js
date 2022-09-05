@@ -3,7 +3,7 @@ import classes from "./Cart.module.css";
 import Modal from "../Modal/Modal";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
-import { Link } from "react-router-dom";
+
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
