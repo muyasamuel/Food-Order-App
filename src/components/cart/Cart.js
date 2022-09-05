@@ -3,9 +3,12 @@ import classes from "./Cart.module.css";
 import Modal from "../Modal/Modal";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Cart(props) {
+  let navigate = useNavigate();
   const cartCtx = useContext(CartContext);
   const totalAmount = ` Ksh ${cartCtx.totalAmount} `;
   const cartHasItems = cartCtx.items.length > 0;
@@ -43,7 +46,7 @@ function Cart(props) {
           Close
         </button>
         
-        {cartHasItems && <button className={classes.button}>Order</button>}
+        {cartHasItems && <button onClick={() => navigate('/order')} className={classes.button}>Order</button>}
       </div>
     </Modal>
   );
