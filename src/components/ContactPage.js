@@ -7,14 +7,16 @@ import { MdEmail  } from "react-icons/md";
 function ContactPage() {
   return (
     <div className="background">
-      <h1>
+      <div className="wrapper">
+        <h1>
         <span>Contact</span> us
       </h1>
       <p>
         Feel free to contact us anytime. We will get back to you soon as we can{" "}
-      </p>
-      
-      <div className="contactDiv">
+      </p> 
+
+
+  <div className="contactDiv">
         <div>
           <h1> Lets Talk</h1>
           <p>Ask as anything...</p>
@@ -28,9 +30,14 @@ function ContactPage() {
           <input type="emai" placeholder="Email" />
           <input type="text" placeholder="Meassage" />
 
-          <button> SEND</button>
+          <button className="btn"> SEND</button>
         </div>
       </div>
+
+      </div>
+     
+      
+    
     </div>
   );
 }
