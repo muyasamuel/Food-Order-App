@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FOod-Order-App/static/css/main.f4a0c48f.css",
+    "main.js": "/FOod-Order-App/static/js/main.0dc0132e.js",
+    "static/media/wallpaper.jpg": "/FOod-Order-App/static/media/wallpaper.67f474f0beae80cbdbbf.jpg",
+    "static/media/about.jpg": "/FOod-Order-App/static/media/about.a9ce9bf342e38efcc08c.jpg",
+    "static/media/contact.jpg": "/FOod-Order-App/static/media/contact.eeaab7faa22bee8af429.jpg",
+    "index.html": "/FOod-Order-App/index.html",
+    "main.f4a0c48f.css.map": "/FOod-Order-App/static/css/main.f4a0c48f.css.map",
+    "main.0dc0132e.js.map": "/FOod-Order-App/static/js/main.0dc0132e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4a0c48f.css",
+    "static/js/main.0dc0132e.js"
+  ]
+}
